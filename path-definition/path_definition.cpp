@@ -5,5 +5,5 @@
 #include "path_definition.h"
 
 void print_val() {
-    print_val_impl();
+    std::cout << getPath() << '\n';
 }

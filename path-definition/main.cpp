@@ -5,6 +5,6 @@
 #include "path_definition.h"
 
 int main() {
-    std::cout << "look at val: ";
+    std::cout << "Path is: ";
     print_val();
 }

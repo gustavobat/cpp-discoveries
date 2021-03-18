@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#define IS_INSTALL
+//#define IS_INSTALL
 
 #define INSTALL_DIR "/usr/local/blob"
 #define BUILD_DIR "Git/blob/"
@@ -18,8 +18,8 @@
 #define PATH BUILD_DIR
 #endif
 
-static void print_val_impl() {
-    std::cout << PATH << '\n';
+static std::string_view getPath() {
+    return PATH;
 }
 
 void print_val();
