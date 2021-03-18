@@ -2,4 +2,5 @@ cmake_minimum_required(VERSION 3.15)
 
 project(cpp-discoveries CXX)
 
-add_subdirectory(boundary-checking-array)
+add_subdirectory(std-threads)
+add_subdirectory(path-definition)
