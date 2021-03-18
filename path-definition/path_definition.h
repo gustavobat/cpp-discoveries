@@ -7,19 +7,19 @@
 
 #include <iostream>
 
-#define USE_VAL2
+#define IS_INSTALL
 
-#define VAL1 1
-#define VAL2 2
+#define INSTALL_DIR "/usr/local/blob"
+#define BUILD_DIR "Git/blob/"
 
-#ifdef USE_VAL2
-#define VAL VAL2
+#ifdef IS_INSTALL
+#define PATH INSTALL_DIR
 #else
-#define VAL VAL1
+#define PATH BUILD_DIR
 #endif
 
 static void print_val_impl() {
-    std::cout << VAL << '\n';
+    std::cout << PATH << '\n';
 }
 
 void print_val();
