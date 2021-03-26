@@ -4,3 +4,4 @@ project(cpp-discoveries CXX)
 
 add_subdirectory(std-threads)
 add_subdirectory(path-definition)
+add_subdirectory(mat-inheritance)
