@@ -5,22 +5,17 @@
 #ifndef CPP_DISCOVERIES_TPZMATINTERFACES_H
 #define CPP_DISCOVERIES_TPZMATINTERFACES_H
 
-//T wo interfaces
+// Two interfaces
 class MemInterface {
 public:
     MemInterface() {}
-    virtual void MemMethod() {
-        std::cout << "MemMethod() was called!\n";
-    }
+    virtual void MemMethod() = 0;
 };
 
 class ErrorInterface {
 public:
     ErrorInterface() {}
-    virtual void ErrorMethod() {
-        std::cout << "ErrorMethod() was called!\n";
-    }
+    virtual void ErrorMethod() = 0;
 };
-
 
 #endif //CPP_DISCOVERIES_TPZMATINTERFACES_H

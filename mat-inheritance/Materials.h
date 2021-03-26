@@ -5,27 +5,24 @@
 #ifndef CPP_DISCOVERIES_MATERIALS_H
 #define CPP_DISCOVERIES_MATERIALS_H
 
-class MemMat : public TPZMaterial<MemInterface> {
+// Example of materials
+class SimpleMat : public TPZMaterialImpl<> {
 public:
-    void MemMethod() override {
-        std::cout << "MemMat::MemMethod() was called!\n";
+    void CommonMethod() override {
+        std::cout << "SimpleMat::CommonMethod() was called!\n";
     }
 };
 
-class ErrorMat : public TPZMaterial<ErrorInterface> {
+class ComplexMat : public TPZMaterialImpl<MemInterface, ErrorInterface> {
 public:
-    void ErrorMethod() override {
-        std::cout << "ErrorMat::MemMethod() was called!\n";
+    void CommonMethod() override {
+        std::cout << "ComplexMat::CommonMethod() was called!\n";
     }
-};
-
-class ComplexMat : public TPZMaterial<MemInterface, ErrorInterface> {
-public:
     void MemMethod() override {
         std::cout << "ComplexMat::MemMethod() was called!\n";
     }
     void ErrorMethod() override {
-        std::cout << "ComplexMat::MemMethod() was called!\n";
+        std::cout << "ComplexMat::ErrorMethod() was called!\n";
     }
 };
 

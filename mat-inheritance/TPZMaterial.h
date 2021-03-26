@@ -5,20 +5,16 @@
 #ifndef CPP_DISCOVERIES_TPZMATERIAL_H
 #define CPP_DISCOVERIES_TPZMATERIAL_H
 
-
-class TPZMatBase {
+class TPZMaterial {
 public:
-    virtual void CommonMatMethod() = 0;
+    virtual void CommonMethod() = 0;
 };
 
 // Class with (possibly) multiple inheritance
 template <typename... Interfaces>
-class TPZMaterial : public TPZMatBase, public Interfaces... {
+class TPZMaterialImpl : public TPZMaterial, public Interfaces... {
 public:
-    TPZMaterial() : Interfaces() ... {};
-    void CommonMatMethod() override {
-        std::cout << "TPZMaterial::CommonMatMethod()\n";
-    }
+    TPZMaterialImpl() : Interfaces() ... {};
 };
 
 #endif //CPP_DISCOVERIES_TPZMATERIAL_H
